@@ -4,7 +4,7 @@ var app = express();
 
 app.get('/', (request, response) => {
     console.log("Received request: " + JSON.stringify(request.url));
-    response.send('Hello from NodeJs');
+    response.send('Hello from NodeJs v1');
 });
 
 var server = app.listen(9001);
