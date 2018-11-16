@@ -16,7 +16,7 @@ docker build -t playpen/node-rest .
 ```bash
 docker network create playpen-network
 
-docker run -d --name playpen-node-rest --net=playpen-network -p 9001:9001 playpen/node-rest:latest
+docker run -d --name playpen-node-rest --net=playpen-network -p 9001:9001 -e MYSQL_HOST=playpen-mysql playpen/node-rest:latest
 ```
 
 * Ensure the API endpoint is working fine
